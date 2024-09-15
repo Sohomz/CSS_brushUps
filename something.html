@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="hollowCircle_1"></div>
+        <div class="netCircle_1"></div>
+        <div class="hollowCircle_2"></div>
+        <div class="netCircle_2"></div>
+        <div class="hollowCircle_3"></div>
+
+    </div>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns:repeat(5,76px);
+            grid-template-rows:repeat(10,38px);
+            justify-content:center;
+        }
+        body{
+            background-color:#050044;
+            margin-bottom:20px;
+        }
+        .hollowCircle_1{
+            grid-area:2/3/3/4;
+            width: 60px;
+            height: 60px;
+            background-color: #050044;
+            border-radius: 50%;
+            border-style: solid;
+            border-width: 10px;
+            border-color: #328FC1;
+            margin-top:5px;
+            z-index:5;
+        }
+        .netCircle_1{
+            grid-area:3/3/4/4;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #328FC1 ;
+            margin-left: 10px;
+            margin-top:16px;
+            z-index:4;
+        }
+        .hollowCircle_2{
+            grid-area:4/3/5/4;
+            width: 60px;
+            height: 60px;
+            background-color: #050044;
+            border-radius: 50%;
+            border-style: solid;
+            border-width: 10px;
+            border-color: #328FC1;
+            margin-top:-2px;
+            z-index:3;
+        }
+        .netCircle_2{
+            grid-area:5/3/6/4;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #328FC1 ;
+            margin-left: 10px;
+            margin-top:10px;
+            z-index: 2;
+        }
+        .hollowCircle_3{
+            grid-area:6/3/7/4;
+            width: 60px;
+            height: 60px;
+            background-color: #050044;
+            border-radius: 50%;
+            border-style: solid;
+            border-width: 10px;
+            border-color: #328FC1;
+            margin-top:-7px;
+            z-index:1;
+        }
+    </style>
+
+
+    </style>
+
+    </style>
+</body>
+</html>
