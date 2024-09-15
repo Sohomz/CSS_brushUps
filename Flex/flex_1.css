@@ -74,6 +74,6 @@ h1{
     flex-basis: 300px;  this item is used to overwritte the size if previously defined somewhere, 
     it was 100px,now its 300px*/
     align-self: center;
-    order:0; /*by default 0, to order the divs in reverse -1, if not then 0
+    order:0; /*by default 0, to order the divs in reverse -1, if not then 0*/
 }
 
