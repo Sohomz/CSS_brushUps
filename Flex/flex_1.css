@@ -1,0 +1,79 @@
+h1{
+    background-color: #249fcf;
+    color: aliceblue;
+}
+/* BASE STYLES */
+:root {
+    --clr-dark: #0f172a;
+    --clr-light: #f1f5f9;
+    --clr-accent: #e11d48;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    word-spacing: 1.4px;
+    font-family: "Roboto", sans-serif;
+    color: var(--clr-dark);
+    background-color: var(--clr-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .container {
+    width: 80%;
+    height: 700px;
+    margin: 0 auto;
+    border: 10px solid var(--clr-dark);
+  }
+  
+  .item {
+    width: 150px;
+    height: 150px;
+    background-color: #fb7185;
+    padding: 1em;
+    font-weight: 700;
+    color: var(--clr-light);
+    text-align: center;
+    border: 10px solid var(--clr-accent);
+    border-radius: 10px;
+  }
+  
+  /* END OF BASE STYLES */
+
+.container{
+    display: flex;
+    /*flex-direction: column; /*By default its row, if we want to change it*/
+    /*  justify-content: space-evenly; /*space-between or space-evenly etc*/
+    /*align-items: flex-start; /*left to right, topto bottom is by default axiswise, disabling this for flex-wrap, else it will be one liner*/
+
+    /*Column wise space in between or row wise space in between*/
+
+    /*Now if I add more divs then by default flex will fit it in one row i.e. 1st row, to fix it we need flex-wrap
+    =wrap; by default its nowrap*/
+    /* currently its like : This is div 1     This is div 2     This is div 3     This is div 4     This is div 1     This is div 2    This is div 3    This is div 4    This is div 1    This is div 2    This is div 3    This is div 4; */
+
+    flex-wrap: wrap;
+    /* align-content: center; */
+    gap: 1em; /* this will also work as same justift-content:space evenly*/
+    
+}
+
+.item-3{
+    flex-grow: 1; /*bigger the size if space is there*/
+    /* flex-shrink: 1; this iteam will shrink faster than others if u smaller the browser window
+    flex-basis: 300px;  this item is used to overwritte the size if previously defined somewhere, 
+    it was 100px,now its 300px*/
+    align-self: center;
+    order:0; /*by default 0, to order the divs in reverse -1, if not then 0
+}
+
