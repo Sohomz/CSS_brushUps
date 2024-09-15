@@ -1,0 +1,53 @@
+h1{
+    background-color: #cf2424;
+    color: aliceblue;
+}
+
+.item{
+    border:10px solid red;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; /*this is fraction, second column has more space*/
+    grid-template-rows: 50px 50px;
+    /*below code is allign the items inside grid/*/
+    justify-items: center;
+    align-items: center;
+}
+
+.item-2{
+    justify-self: end;
+    align-self: stretch;
+    border: 2px solid red;
+}
+
+.container_2{
+    display: grid;
+    grid-template-columns: 1fr minmax(100px,2fr) 1fr; /*this is minmax, when u do browser window bigger or smaller
+    this will go max 2fr and min 100px*/
+    grid-template-rows: repeat(3,auto-fit); /*Repeat will repeat the row 3 times, 100pxor auto-fit to 
+    "if I minimize browswer window, responsively it will be also adjusted*/
+    grid-gap: 1em; /*Gap between grids*/
+    grid-template-areas: 
+    'header header h1'
+    'main aside aside'
+    'footer footer f2'; /*Name matters, if u are giving same name that means it will vover that place entirly*/
+    
+}
+
+.item-22{
+    border: 2px solid rgb(8, 0, 255);
+    grid-area: header;/* if I want to make item-22 as header, that will occupy theheader area template-areas*/
+}
+
+.item-11{
+    border: 2px solid rgb(8, 0, 255);
+    grid-area: main;
+}
+
+.item-33{
+    border: 2px solid rgb(8, 0, 255);
+    grid-area: footer;
+}
+
+

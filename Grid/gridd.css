@@ -1,0 +1,55 @@
+h1{
+    background-color: #cf2424;
+    color: aliceblue;
+}
+.container{
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px 100px 100px 100px;
+    /*This is for div 5 correction as this was added/implicit small px in in LHS and as a row*/
+    grid-auto-rows: 100px; /*by default its 20px or smaller than that, but in thatcase use grid-auto-column=100px*/
+    grid-auto-flow: column; /*By default its row*/
+}
+
+.item-1{
+    grid-row-start:1 ;
+    grid-row-end: 3;
+    grid-column-start: 4;
+    grid-column-end:2 ;
+    background-color: red;
+    z-index: 1;
+}
+
+.item-2{
+    grid-row-start:3;
+    grid-row-end: 3;
+    grid-column-start: 5;
+    grid-column-end:7 ;
+    background-color: rgb(60, 29, 235);
+    z-index: 1;
+}
+
+.item-3{/*trying grid area*/
+    grid-area: 5/ 1/ 7/ 3;
+    /* grid-row-start:5;
+    grid-row-end: 7;
+    grid-column-start: 1;
+    grid-column-end:3 ; */
+    background-color: rgb(29, 235, 118);
+    /*z-index: 1; this is likw wrap text to top, overlapping*/
+    z-index: 1;
+}
+
+.item-4{
+    grid-row-start:5;
+    grid-row-end: 5;
+    grid-column-start: 2;
+    grid-column-end:4 ;
+    background-color: rgb(235, 101, 29);
+    z-index: 1;
+}
+
+.item-cover{
+    grid-area:1/1/7/7;
+    background-color: #313131;
+}
